@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="tinyserver",
-    version="0.0.1",
+    version="0.0.2",
     author="lorb",
     author_email="lorbritzer@yahoo.de",
     description="A tiny http server",

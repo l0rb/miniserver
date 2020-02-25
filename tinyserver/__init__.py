@@ -2,11 +2,12 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 
 class miniRequestHandler(BaseHTTPRequestHandler):
     _message = ''
+    _content_type = 'text/html'
 
     def do_GET(self):
         self.send_response(200)
 
-        self.send_header('Content-type', 'text/html')
+        self.send_header('Content-type', self._content_type)
         self.end_headers()
 
         self._write(self.message())
